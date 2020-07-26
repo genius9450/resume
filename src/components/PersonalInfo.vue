@@ -16,12 +16,12 @@
           
         </el-col>
         <el-col :span="10" class="contactInfoPC" >
-          <el-link :href="`mailto:{email}`" type="info">                        
+          <el-link :href="'mailto:' + email" type="info">
             {{ email }} 
             <i class="el-icon-message"></i>                        
           </el-link>
           <br>
-          <el-link :href="`tel:{phone}`" type="info">
+          <el-link :href="'tel:' + phone" type="info">
             {{ phone }}
             <i class="el-icon-phone"></i>
           </el-link>
@@ -52,12 +52,12 @@
 
       <el-row>
         <el-col class="contactInfoMobile" >
-          <el-link :href="`mailto:{email}`" type="info">
+          <el-link :href="'mailto:' + email" type="info">
             <i class="el-icon-s-promotion"></i>
             {{ email }}            
           </el-link>
           <br>
-          <el-link :href="`tel:{phone}`" type="info">
+          <el-link :href="'tel:' + phone" type="info">
             <i class="el-icon-phone"></i>
             {{ phone }}            
           </el-link>
@@ -86,7 +86,7 @@ export default {
       name: '江佩珊',
       title: 'Full Stack Developer',
       email: 'genius9450@gmail.com',
-      phone: '+886 919689866',
+      phone: '+886919689866',
       github: 'https://github.com/genius9450',
       introduction: '享受使用有限資源解決當下問題，樂於在開發過程中加入小巧思，也喜歡與團隊共同討論進而激盪出不同思維，期望能發揮所學開發出有溫度並且解決痛點的產品。'
     }
