@@ -31,11 +31,19 @@ export default {
         otherSkillList: [
          {
            type: 'Languages',
-           desc: 'C#.NET, VB.NET, JavaScript, CSS3, HTML5, Vue'
+           desc: 'C#.NET, VB.NET, JavaScript, CSS, HTML, SQL'
          },
+        //  {
+        //    type: 'Backend Framework',
+        //    desc: 'DotNetCore, Abp, ASP.NET MVC, ASP.NET Webform'
+        //  },
+        //  {
+        //    type: 'Frontend Framework',
+        //    desc: 'Angualr, Vue, Bootstrap'
+        //  },
          {
            type: 'Database',
-           desc: 'Ms-SQL, MariaDB(MySQL), MongoDb(NoSQL), Redis'
+           desc: 'Ms-SQL, MySQL, MongoDb, Redis'
          },
          {
            type: 'Version Control',
@@ -50,12 +58,8 @@ export default {
            desc: 'Jira, Mantis, Redmine, Trello'
          },
          {
-           type: 'Web Scoket',
-           desc: 'SignalR'
-         },
-         {
            type: 'Others',
-           desc: 'Lucene, Solr, Seq'
+           desc: 'SignalR, Lucene, Solr, Seq'
          }
         ]
       };

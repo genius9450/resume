@@ -88,7 +88,7 @@ export default {
       email: 'genius9450@gmail.com',
       phone: '+886919689866',
       github: 'https://github.com/genius9450',
-      introduction: '享受使用有限資源解決當下問題，樂於在開發過程中加入小巧思，也喜歡與團隊共同討論進而激盪出不同思維，期望能發揮所學開發出有溫度並且解決痛點的產品。'
+      introduction: this.$i18n.t('introduction')
     }
   }
 }

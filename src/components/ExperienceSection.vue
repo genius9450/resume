@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row>
-      <section-title title="工作經歷" icon="el-icon-suitcase-1"></section-title>
+      <section-title :title="$t('workExperience')" icon="el-icon-suitcase-1"></section-title>
     </el-row>
     <el-row>
       <el-timeline>
@@ -52,52 +52,55 @@ export default {
     return {
         activities: [
         {
-          title: '研發工程師',
-          company: '歐特儀股份有限公司',
+          title: this.$i18n.t('developmentEngineer'),
+          company: this.$i18n.t('altob'),
           timestamp: '2020/06 - Present',
           taskList: [
-            '金流API規劃、文件規格撰寫',
-            'Seq系統Log日誌規劃',
-            '介接Telegram訊息即時通知模組'
+            this.$i18n.t('altob_task1'),
+            this.$i18n.t('altob_task2'),
+            this.$i18n.t('altob_task3'),
+            this.$i18n.t('altob_task4'),
+            this.$i18n.t('altob_task5'),
+            this.$i18n.t('altob_task6')
           ]
         }, 
         {
-          title: '程式設計師',
-          company: '信業國際',
+          title: this.$i18n.t('programmer'),
+          company: this.$i18n.t('shinya'),
           timestamp: '2019/05 - 2020/05',
           taskList: [
-            '遊戲產品開發WebSite：前後台資料即時更新(SignalR)、系統排程設計(Hangfire)、規劃前台資料讀取流程、虛擬化機器應用(Docker)',
-            '介接API：說明文件規格撰寫、API撰寫'
+            this.$i18n.t('shinya_task1'),
+            this.$i18n.t('shinya_task2')
           ]
         }, 
         {
-          title: '程式分析師',
-          company: '達璟資訊',
+          title: this.$i18n.t('programAnalyst'),
+          company: this.$i18n.t('dajin'),
           timestamp: '2018/01 - 2019/02',
           taskList: [
-            '程式分析、產品開發、指導或協助同仁開發上問題',
-            'CRM 3.0產品開發：跨裝置之客戶管理系統(RWD)，功能並涵蓋行銷、SNS(ASP.NET MVC C#.NET)',
-            '幼教親子型APP、POS系統APP：使用Xamarin開發雙平台(iOS、Android)、手機推播發送(google Firebase)、營業報表產製(KendoUI Chart)',
-            '知識管理：Solr應用(全文檢索)'
+            this.$i18n.t('dajin_task1'),
+            this.$i18n.t('dajin_task2'),
+            this.$i18n.t('dajin_task3'),
+            this.$i18n.t('dajin_task4')
           ]
         }, 
         {
-          title: '程式設計師',
-          company: '叡揚資訊',
+          title: this.$i18n.t('programmer'),
+          company: this.$i18n.t('gss'),
           timestamp: '2016/07 - 2017/12',
           taskList: [
-            '程式撰寫、專案開發、系統維護',
-            '政府機關民意信箱WebSite：前後台系統開發/維護(ASP.NET MVC C#.NET / ASP.NET Webform VB.NET)、Email發送、API撰寫/介接、表單/報表繪製、資料轉檔匯出等功能',
-            '資訊安全：Checkmarx原始碼安全漏洞補強',
-            '知識管理：Lucene應用(全文檢索)'
+            this.$i18n.t('gss_task1'),
+            this.$i18n.t('gss_task2'),
+            this.$i18n.t('gss_task3'),
+            this.$i18n.t('gss_task4')
           ]
         }, 
         {
-          title: '助理工程師',
-          company: '叡揚資訊',
+          title: this.$i18n.t('assistantProgrammer'),
+          company: this.$i18n.t('gss'),
           timestamp: '2015/07 - 2016/06',
           taskList: [
-            '程式撰寫、繪製UI雛形、系統維護'
+            this.$i18n.t('gss_task1')
           ]
         }]
       };

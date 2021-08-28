@@ -1,7 +1,7 @@
 <template>
   <div>    
     <el-row>
-      <section-title title="語言" icon="el-icon-collection"></section-title>
+      <section-title :title="$t('language')" icon="el-icon-collection"></section-title>
     </el-row>
     <el-row  style="margin-left: 5%;"
       v-for="language in languages"
@@ -35,15 +35,15 @@ export default {
     return {
       languages: [
         { 
-          lang: 'Chinese',
+          lang: this.$i18n.t('chinese'),
           rank: 5
         },
         { 
-          lang: 'Taiwanese',
+          lang: this.$i18n.t('taiwanese'),
           rank: 4
         },
         { 
-          lang: 'English',
+          lang: this.$i18n.t('english'),
           rank: 3
         }
       ]

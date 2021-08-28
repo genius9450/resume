@@ -9,8 +9,11 @@
         :key="skill"
         color="#008080"
         effect="dark"
+        :style="{'font-size': 'large', 'cursor': (skill.link != '' ? 'pointer' : 'default') }"
+        @click="openLink(skill.link)"
       >
-        <Label style="font-size: large;">{{ skill }}</Label>
+        {{ skill.name }}
+        <i v-if="skill.link != ''" class="el-icon-share"></i>
       </el-tag>
     </el-row>
   </div>    
@@ -27,19 +30,25 @@ export default {
   },
   data: function () {
     return {
-        skillList: [
-          'DotNet Core',
-          'ASP.NET MVC',
-          'ASP.NET Webform',
-          'Xamarin',
-          'SQL',
-          'jQuery',
-          'LINQ',
-          'KendoUI',
-          'Element UI'
-        ]
-      };
-    },
+      skillList: [
+        { name: 'DotNet Core', link: 'https://github.com/genius9450/DotNetCoreApi.Template' },
+        { name: 'ASP.NET MVC', link: '' },
+        { name: 'ASP.NET Webform', link: '' },
+        { name: 'Xamarin', link: '' },
+        { name: 'Angular', link: '' },
+        { name: 'Vue', link: 'https://github.com/genius9450/mask-query-system' },
+        { name: 'KendoUI', link: '' },
+        { name: 'ElementUI', link: '' },
+        { name: 'CoreUI', link: '' },
+        { name: 'Bootstrap', link: '' }
+      ]
+    };
+  },
+  methods: {
+    openLink(link) {
+      window.open(link, '_blank');
+    }
+  }
 }
 </script>
 

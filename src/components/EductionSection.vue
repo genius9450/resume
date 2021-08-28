@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row>
-      <section-title title="學歷" icon="el-icon-school"></section-title>
+      <section-title :title="$t('education')" icon="el-icon-school"></section-title>
     </el-row>
     <el-row  style="margin-left: 5%;">      
       <div
@@ -30,8 +30,8 @@ export default {
     return {
         activities: [
         {
-          dept: '醫務管理暨醫療資訊學系',
-          school: '高雄醫學大學',
+          dept: this.$i18n.t('hami'),
+          school: this.$i18n.t('kmu'),
           timestamp: '2012/09 - 2016/06'
         }]
       };

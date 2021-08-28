@@ -1,6 +1,6 @@
 <template>
   <div>
-      <span class="sectionTitle">        
+      <span class="sectionTitle text-uppercase">        
         <i :class="icon"></i>
         {{ title }}
       </span>

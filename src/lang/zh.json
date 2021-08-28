@@ -1,0 +1,43 @@
+{        
+    "workExperience": "工作經歷",
+    "developmentEngineer": "研發工程師",
+    "programmer": "程式設計師",
+    "programAnalyst": "程式分析師",
+    "assistantProgrammer": "助理工程師",            
+
+    "altob": "歐特儀股份有限公司",
+    "altob_task1": "擔任Mentor協助新人熟悉系統、建構專案範本",
+    "altob_task2": "金流服務開發：整合公司線上交易服務",
+    "altob_task3": "發票服務、管理平台開發：整合公司線上線上發票服務",
+    "altob_task4": "公司內部營運管理網頁平台開發(ABP):Line OAuth登入驗證",
+    "altob_task5": "整合可靠Log系統(Seq)至專案中",
+    "altob_task6": "建立異常通知及時通知系統(Telegram)",
+
+    "shinya": "信業國際",
+    "shinya_task1": "遊戲產品開發WebSite：前後台資料即時更新(SignalR)、系統排程設計(Hangfire)、規劃前台資料讀取流程、虛擬化機器應用(Docker)",
+    "shinya_task2": "介接API：說明文件規格撰寫、API撰寫",
+
+    "dajin": "達璟資訊",
+    "dajin_task1": "程式分析、產品開發、指導或協助同仁開發上問題",
+    "dajin_task2": "CRM 3.0產品開發：跨裝置之客戶管理系統(RWD)，功能並涵蓋行銷、SNS(ASP.NET MVC C#.NET)",
+    "dajin_task3": "幼教親子型APP、POS系統APP：使用Xamarin開發雙平台(iOS、Android)、手機推播發送(google Firebase)、營業報表產製",
+    "dajin_task4": "知識管理：Solr應用(全文檢索)",
+
+    "gss": "叡揚資訊",
+    "gss_task1": "程式撰寫、專案開發、系統維護",
+    "gss_task2": "政府機關民意信箱WebSite：前後台系統開發/維護(ASP.NET MVC C#.NET / ASP.NET Webform VB.NET)、Email發送、API撰寫/介接、表單/報表繪製、資料轉檔匯出等功能",
+    "gss_task3": "資訊安全：Checkmarx原始碼安全漏洞補強",
+    "gss_task4": "知識管理：Lucene應用(全文檢索)",
+
+    "introduction": "享受使用有限資源解決當下問題，樂於在開發過程中加入小巧思，也喜歡與團隊共同討論進而激盪出不同思維，期望能發揮所學開發出有溫度並且解決痛點的產品。",
+
+    "language": "語言",
+    "chinese": "中文",
+    "taiwanese": "台語",
+    "english": "英文",
+
+    "education": "學歷",
+    "hami": "醫務管理暨醫療資訊學系",
+    "kmu": "高雄醫學大學"
+
+}

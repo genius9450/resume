@@ -1,7 +1,7 @@
 <template>  
     <el-card :style="{ backgroundImage:'url('+bgImg+')'}" :body-style="{ padding: '0px' }"  class="bg" shadow="always">
       <el-container id="app" >
-        <el-main>
+        <el-main>          
           <Personal></Personal>
           <Content></Content>
         </el-main>
