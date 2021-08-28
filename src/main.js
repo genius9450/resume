@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 import ElementUI from 'element-ui'
-import CountryFlag from 'vue-country-flag'
 import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/display.css';
 
@@ -12,7 +11,6 @@ import en from './lang/en.json';      // 存放英文語系檔
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueI18n)
-Vue.component('country-flag', CountryFlag)
 
 // 預設使用的語系
 let locale = '';
