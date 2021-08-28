@@ -18,7 +18,7 @@
         <el-col :span="10" class="contactInfoPC" >
           <el-link type="info" :href="switchLangUrl" >
             {{ lang }}
-            <i class="el-icon-view"></i>                        
+            <i class="el-icon-view"></i>
           </el-link>
           <br>
           <el-link :href="'mailto:' + email" type="info">
@@ -57,6 +57,11 @@
 
       <el-row>
         <el-col class="contactInfoMobile" >
+          <el-link type="info" :href="switchLangUrl" >
+            <i class="el-icon-view"></i>
+            {{ lang }}            
+          </el-link>
+          <br>
           <el-link :href="'mailto:' + email" type="info">
             <i class="el-icon-s-promotion"></i>
             {{ email }}            
@@ -102,7 +107,7 @@ export default {
       return currentLang == 'en' ? '閱讀中文' : 'Read in English';
     },
     switchLangUrl: function() {
-      return localStorage.getItem('lang') == 'zh' ? '/en' : '/zh';
+      return localStorage.getItem('lang') == 'zh' ? '?lang=en' : '?lang=zh';
     }
   },
   methods: {

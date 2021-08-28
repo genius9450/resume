@@ -14,9 +14,8 @@ Vue.use(VueI18n)
 
 // 預設使用的語系
 let locale = '';
-let url = new URL(window.location.href);
-switch(url.pathname.toUpperCase()) {
-  case '/EN':
+switch(new URL(window.location.href).searchParams.get('lang')?.toUpperCase()) {
+  case 'EN':
     locale = 'en';
     break;
   default:
