@@ -38,5 +38,8 @@
 
     "education": "EDUCATION",
     "hami": "Department of Healthcare Administration and Medical Informatics",
-    "kmu": "Kaohsiung Medical University"
+    "kmu": "Kaohsiung Medical University",
+
+    "skills": "SKILLS",
+    "otherSkill": "OTHER SKILLS"
 }

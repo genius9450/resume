@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import ElementUI from 'element-ui'
+import CountryFlag from 'vue-country-flag'
 import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/display.css';
 
@@ -11,17 +12,20 @@ import en from './lang/en.json';      // 存放英文語系檔
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueI18n)
+Vue.component('country-flag', CountryFlag)
 
 // 預設使用的語系
-let locale = 'en';
-// 檢查 localStorage 是否已有保存使用者選用的語系資訊
-if (localStorage.getItem('lang')) {
-  locale = localStorage.getItem('lang');
-  // store.commit('setLang', locale);
-} else {
-  localStorage.setItem('lang', locale);
-  // store.commit('setLang', locale);
+let locale = '';
+let url = new URL(window.location.href);
+switch(url.pathname.toUpperCase()) {
+  case '/EN':
+    locale = 'en';
+    break;
+  default:
+    locale = 'zh';
+    break; 
 }
+localStorage.setItem('lang', locale);
 
 const i18n = new VueI18n({
   locale: locale,

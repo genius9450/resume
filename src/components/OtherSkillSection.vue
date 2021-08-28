@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row>
-      <section-title title="Other Skills" icon="el-icon-folder-opened"></section-title>
+      <section-title :title="$t('otherSkill')" icon="el-icon-folder-opened"></section-title>
     </el-row>
     <el-row style="margin-left: 5%;">
       <div
@@ -33,14 +33,6 @@ export default {
            type: 'Languages',
            desc: 'C#.NET, VB.NET, JavaScript, CSS, HTML, SQL'
          },
-        //  {
-        //    type: 'Backend Framework',
-        //    desc: 'DotNetCore, Abp, ASP.NET MVC, ASP.NET Webform'
-        //  },
-        //  {
-        //    type: 'Frontend Framework',
-        //    desc: 'Angualr, Vue, Bootstrap'
-        //  },
          {
            type: 'Database',
            desc: 'Ms-SQL, MySQL, MongoDb, Redis'

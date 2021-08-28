@@ -1,12 +1,12 @@
 <template>
   <div>
     <el-row>
-      <section-title title="Skills" icon="el-icon-folder"></section-title>
+      <section-title :title="$t('skills')" icon="el-icon-folder"></section-title>
     </el-row>
     <el-row style="margin-left: 5%;">
       <el-tag
         v-for="skill in skillList"   
-        :key="skill"
+        :key="skill.name"
         color="#008080"
         effect="dark"
         :style="{'font-size': 'large', 'cursor': (skill.link != '' ? 'pointer' : 'default') }"

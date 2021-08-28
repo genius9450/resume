@@ -16,8 +16,13 @@
           
         </el-col>
         <el-col :span="10" class="contactInfoPC" >
+          <el-link type="info" :href="switchLangUrl" >
+            {{ lang }}
+            <i class="el-icon-view"></i>                        
+          </el-link>
+          <br>
           <el-link :href="'mailto:' + email" type="info">
-            {{ email }} 
+            {{ email }}
             <i class="el-icon-message"></i>                        
           </el-link>
           <br>
@@ -89,6 +94,20 @@ export default {
       phone: '+886919689866',
       github: 'https://github.com/genius9450',
       introduction: this.$i18n.t('introduction')
+    }
+  },
+  computed: {
+    lang: function () {
+      let currentLang = localStorage.getItem('lang');
+      return currentLang == 'en' ? '閱讀中文' : 'Read in English';
+    },
+    switchLangUrl: function() {
+      return localStorage.getItem('lang') == 'zh' ? '/en' : '/zh';
+    }
+  },
+  methods: {
+    switchLang: function() {
+      
     }
   }
 }
