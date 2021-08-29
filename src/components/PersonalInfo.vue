@@ -93,8 +93,8 @@ export default {
   name: 'PersonalInfo',
   data: function(){
     return {
-      name: '江佩珊',
-      title: 'Full Stack Developer',
+      name: this.$i18n.t('myName'),
+      title: this.$i18n.t('myTitle'),
       email: 'genius9450@gmail.com',
       phone: '+886919689866',
       github: 'https://github.com/genius9450',
@@ -109,12 +109,7 @@ export default {
     switchLangUrl: function() {
       return localStorage.getItem('lang') == 'zh' ? '?lang=en' : '?lang=zh';
     }
-  },
-  methods: {
-    switchLang: function() {
-      
-    }
-  }
+  }  
 }
 </script>
 

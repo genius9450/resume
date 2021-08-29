@@ -1,4 +1,7 @@
 {        
+    "myName": "江佩珊",
+    "myTitle": "全端工程師",
+
     "workExperience": "工作經歷",
     "developmentEngineer": "研發工程師",
     "programmer": "程式設計師",
@@ -9,7 +12,7 @@
     "altob_task1": "擔任Mentor協助新人熟悉系統、建構專案範本",
     "altob_task2": "金流服務開發：整合公司線上交易服務",
     "altob_task3": "發票服務、管理平台開發：整合公司線上線上發票服務",
-    "altob_task4": "公司內部營運管理網頁平台開發(ABP):Line OAuth登入驗證",
+    "altob_task4": "公司內部營運管理網頁平台開發(ABP)：Line OAuth登入驗證",
     "altob_task5": "整合可靠Log系統(Seq)至專案中",
     "altob_task6": "建立異常通知及時通知系統(Telegram)",
 

@@ -1,4 +1,7 @@
 {
+    "myName": "PEI-SHAN JIANG",
+    "myTitle": "Full Stack Developer",
+
     "workExperience": "WORK EXPERIENCE",
     "developmentEngineer": "Development Engineer",
     "programmer": "Programmer",
@@ -9,7 +12,7 @@
     "altob_task1": "Served as Mentor to assist colleague to solve development problems, establish the project template",
     "altob_task2": "Project Development - Cash flow：Integrate online trading services",
     "altob_task3": "Project Development - Invoice：Integrate online and offline invoice services",
-    "altob_task4": "Project Development - Website(Management):Develop with ABP, and implement Line OAuth login",
+    "altob_task4": "Project Development - Website(Management)：Develop with ABP, and implement Line OAuth login",
     "altob_task5": "Integrate a reliable log system(using Seq) into project",
     "altob_task6": "Establish an exception notification system(using Telegram)",
 
