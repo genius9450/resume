@@ -35,7 +35,7 @@ export default {
          },
          {
            type: 'Frameworks',
-           desc: '.NET Core, ASP.NET MVC, ASP.NET WebForm, Vue, Angular'
+           desc: '.NET Core, ABP, ASP.NET MVC, ASP.NET WebForm, Vue, Angular'
          },
          {
            type: 'Database',
