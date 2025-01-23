@@ -1,17 +1,28 @@
-//deploy.sh
 #!/usr/bin/env sh
-# 當發生錯誤時終止腳本運行
+# 偵錯模式：當發生錯誤時終止腳本執行
 set -e
-# 打包
+
+# 打包專案
+echo "Building project..."
 npm run build
-# 移動至到打包後的dist目錄 
+
+# 移動到打包後的 dist 目錄
 cd dist
-git init //因為dist資料夾預設是被ignore的，因此在進入dist資料夾後初始化git
+
+# 初始化 Git 並提交變更
+echo "Initializing Git in dist directory..."
+git init
 git add -A
 git commit -m 'deploy'
 
-# 部署到 git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages 分支為 gh-pages
-git push -f https://github.com/genius9450/resume.git master:gh-pages
+# 部署到 GitHub Pages
+REPO_URL="https://github.com/genius9450/resume.git"
+BRANCH="gh-pages"
 
-//將dist資料夾中的內容推送至遠端eric-project的gh-pages分支中，並強制無條件將舊有的內容取代成目前的內容（指令 git push -f)
+echo "Deploying to GitHub Pages..."
+git push -f "$REPO_URL" master:"$BRANCH"
+
+# 返回原始目錄
 cd -
+
+echo "Deployment successful!"
