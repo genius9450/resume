@@ -31,7 +31,11 @@ export default {
         otherSkillList: [
          {
            type: 'Languages',
-           desc: 'C#.NET, VB.NET, JavaScript, CSS, HTML, SQL'
+           desc: 'C#, VB, JavaScript, SQL'
+         },
+         {
+           type: 'Frameworks',
+           desc: '.NET Core, ASP.NET MVC, ASP.NET WebForm, Vue, Angular'
          },
          {
            type: 'Database',
@@ -51,7 +55,7 @@ export default {
          },
          {
            type: 'Others',
-           desc: 'SignalR, Lucene, Solr, Seq'
+           desc: 'SignalR, Lucene, Solr, Seq, RabbitMQ'
          }
         ]
       };

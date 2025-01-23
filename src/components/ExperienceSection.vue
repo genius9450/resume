@@ -51,10 +51,21 @@ export default {
   data: function () {
     return {
         activities: [
+          {
+          title: this.$i18n.t('productDeveloper'),
+          company: this.$i18n.t('telexpress'),
+          timestamp: '2023/02 - Present',
+          taskList: [
+            this.$i18n.t('telexpress_task1'),
+            this.$i18n.t('telexpress_task2'),
+            this.$i18n.t('telexpress_task3'),
+            this.$i18n.t('telexpress_task4')
+          ]
+        }, 
         {
           title: this.$i18n.t('developmentEngineer'),
           company: this.$i18n.t('altob'),
-          timestamp: '2020/06 - Present',
+          timestamp: '2020/06 - 2023/01',
           taskList: [
             this.$i18n.t('altob_task1'),
             this.$i18n.t('altob_task2'),
