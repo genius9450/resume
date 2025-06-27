@@ -1,7 +1,10 @@
 <template>
   <div>
     <el-row>
-      <section-title :title="$t('otherSkill')" icon="el-icon-folder-opened"></section-title>
+      <section-title
+        :title="$t('otherSkill')"
+        icon="el-icon-folder-opened"
+      />
     </el-row>
     <el-row style="margin-left: 5%;">
       <div
@@ -11,7 +14,6 @@
       >
         <span style="font-weight: bold;">{{ skill.type }}</span><br>
         <span style="font-size: large;">{{ skill.desc }}</span>
-
       </div>
     </el-row>
   </div>    

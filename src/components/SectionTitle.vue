@@ -1,10 +1,10 @@
 <template>
   <div>
-      <span class="sectionTitle text-uppercase">        
-        <i :class="icon"></i>
-        {{ title }}
-      </span>
-      <div class="line"></div>
+    <span class="sectionTitle text-uppercase">        
+      <i :class="icon" />
+      {{ title }}
+    </span>
+    <div class="line" />
   </div>  
 </template>
 
@@ -13,8 +13,14 @@
 export default {
   name: 'SectionTitle',
   props: {
-    title: String,
-    icon: String
+    title: {
+      type: String,
+      default: ''
+    },
+    icon: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>

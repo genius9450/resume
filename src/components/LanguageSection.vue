@@ -1,11 +1,15 @@
 <template>
   <div>    
     <el-row>
-      <section-title :title="$t('language')" icon="el-icon-collection"></section-title>
+      <section-title
+        :title="$t('language')"
+        icon="el-icon-collection"
+      />
     </el-row>
-    <el-row  style="margin-left: 5%;"
+    <el-row
       v-for="language in languages"
       :key="language.lang"
+      style="margin-left: 5%;"
       :gutter="10"
     >
       <el-col :span="9">
@@ -15,38 +19,42 @@
         <el-rate
           v-model="language.rank"
           disabled
-          text-color="#ff9900">
-        </el-rate>
+          text-color="#ff9900"
+        />
       </el-col>
     </el-row>    
   </div>
-    
 </template>
 
 <script>
 import sectionTitle from './SectionTitle.vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'LanguageSection',
   components: {
     sectionTitle
   },
-  data: function(){
+  setup() {
+    const { t } = useI18n()
+
+    const languages = [
+      { 
+        lang: t('chinese'),
+        rank: 5
+      },
+      { 
+        lang: t('taiwanese'),
+        rank: 4
+      },
+      { 
+        lang: t('english'),
+        rank: 3
+      }
+    ]
+
     return {
-      languages: [
-        { 
-          lang: this.$i18n.t('chinese'),
-          rank: 5
-        },
-        { 
-          lang: this.$i18n.t('taiwanese'),
-          rank: 4
-        },
-        { 
-          lang: this.$i18n.t('english'),
-          rank: 3
-        }
-      ]
+      languages
     }
   }
 }

@@ -1,24 +1,29 @@
 <template>  
-    <el-card :style="{ backgroundImage:'url('+bgImg+')'}" :body-style="{ padding: '0px' }"  class="bg" shadow="always">
-      <el-container id="app" >
-        <el-main>          
-          <Personal></Personal>
-          <Content></Content>
-        </el-main>
-      </el-container>
-    </el-card>  
+  <el-card
+    :style="{ backgroundImage:'url('+bgImg+')'}"
+    :body-style="{ padding: '0px' }"
+    class="bg"
+    shadow="always"
+  >
+    <el-container id="app">
+      <el-main>          
+        <Personal />
+        <MainContent />
+      </el-main>
+    </el-container>
+  </el-card>  
 </template>
 
 <script>
 import BgImg from "./assets/bg.png"
 import Personal from './components/PersonalInfo.vue'
-import Content from './components/Content.vue'
+import MainContent from './components/MainContent.vue'
 
 export default {
   name: 'App',
   components: {
     Personal,
-    Content
+    MainContent
   },
   data: function() {
     return {

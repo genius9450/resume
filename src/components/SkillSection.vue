@@ -1,7 +1,10 @@
 <template>
   <div>
     <el-row>
-      <section-title :title="$t('skills')" icon="el-icon-folder"></section-title>
+      <section-title
+        :title="$t('skills')"
+        icon="el-icon-folder"
+      />
     </el-row>
     <el-row style="margin-left: 5%;">
       <el-tag
@@ -13,7 +16,10 @@
         @click="openLink(skill.link)"
       >
         {{ skill.name }}
-        <i v-if="skill.link != ''" class="el-icon-share"></i>
+        <i
+          v-if="skill.link != ''"
+          class="el-icon-share"
+        />
       </el-tag>
     </el-row>
   </div>    

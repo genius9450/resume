@@ -1,27 +1,29 @@
 <template>
   <div>
     <!-- PC -->
-    <el-row :gutter="20" class="hidden-md-and-down">
+    <el-row
+      :gutter="20"
+      class="hidden-md-and-down"
+    >
       <el-col :span="12">
-        <Experience></Experience>
+        <Experience />
       </el-col>    
       <el-col :span="12">
-        <Skill></Skill>
-        <OtherSkill></OtherSkill>
-        <Eduction></Eduction>
-        <Language></Language>
+        <Skill />
+        <OtherSkill />
+        <Education />
+        <Language />
       </el-col>
     </el-row>
 
     <!-- Mobile -->
     <el-row class="hidden-md-and-up">
-      <Experience></Experience>
-      <Skill></Skill>
-      <OtherSkill></OtherSkill>
-      <Eduction></Eduction>
-      <Language></Language>
+      <Experience />
+      <Skill />
+      <OtherSkill />
+      <Education />
+      <Language />
     </el-row>
-
   </div>  
 </template>
 
@@ -29,16 +31,16 @@
 import Experience from './ExperienceSection.vue'
 import Skill from './SkillSection.vue'
 import OtherSkill from './OtherSkillSection.vue'
-import Eduction from './EductionSection.vue'
+import Education from './EducationSection.vue'
 import Language from './LanguageSection.vue'
 
 export default {
-  name: 'Content',
+  name: 'MainContent',
   components: {
     Experience,
     Skill,
     OtherSkill,
-    Eduction,
+    Education,
     Language
   }
 }
