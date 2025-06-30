@@ -3,7 +3,7 @@
     <el-row>
       <section-title
         :title="$t('education')"
-        icon="el-icon-school"
+        :icon="School"
       />
     </el-row>
     <el-row style="margin-left: 5%;">      
@@ -22,6 +22,7 @@
 
 <script>
 import sectionTitle from './SectionTitle.vue'
+import { School } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
 
 // 學歷區塊
@@ -42,7 +43,8 @@ export default {
     ]
 
     return {
-      activities
+      activities,
+      School
     }
   }
 }

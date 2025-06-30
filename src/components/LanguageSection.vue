@@ -3,7 +3,7 @@
     <el-row>
       <section-title
         :title="$t('language')"
-        icon="el-icon-collection"
+        :icon="Collection"
       />
     </el-row>
     <el-row
@@ -28,6 +28,7 @@
 
 <script>
 import sectionTitle from './SectionTitle.vue'
+import { Collection } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
 
 export default {
@@ -54,7 +55,8 @@ export default {
     ]
 
     return {
-      languages
+      languages,
+      Collection
     }
   }
 }

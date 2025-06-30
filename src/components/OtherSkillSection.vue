@@ -3,24 +3,25 @@
     <el-row>
       <section-title
         :title="$t('otherSkill')"
-        icon="el-icon-folder-opened"
+        :icon="FolderOpened"
       />
     </el-row>
     <el-row style="margin-left: 5%;">
       <div
-        v-for="skill in otherSkillList"   
+        v-for="skill in otherSkillList"
         :key="skill.type"
-        style="margin-bottom: 15px;"
+        style="margin-bottom: 15px; width: 100%;"
       >
         <span style="font-weight: bold;">{{ skill.type }}</span><br>
         <span style="font-size: large;">{{ skill.desc }}</span>
       </div>
     </el-row>
-  </div>    
+  </div>
 </template>
 
 <script>
 import sectionTitle from './SectionTitle.vue'
+import { FolderOpened } from '@element-plus/icons-vue'
 
 // Other Skill區塊
 export default {
@@ -59,7 +60,8 @@ export default {
            type: 'Others',
            desc: 'SignalR, Lucene, Solr, Seq, RabbitMQ'
          }
-        ]
+        ],
+        FolderOpened
       };
     },
 }

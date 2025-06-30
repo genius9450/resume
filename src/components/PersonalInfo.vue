@@ -21,7 +21,7 @@
             :href="switchLangUrl"
           >
             {{ lang }}
-            <i class="el-icon-view" />
+            <el-icon><View /></el-icon>
           </el-link>
           <br>
           <el-link
@@ -29,7 +29,7 @@
             type="info"
           >
             {{ email }}
-            <i class="el-icon-message" />                        
+            <el-icon><Message /></el-icon>
           </el-link>
           <br>
           <el-link
@@ -37,14 +37,14 @@
             type="info"
           >
             {{ phone }}
-            <i class="el-icon-phone" />
+            <el-icon><Phone /></el-icon>
           </el-link>
           <br>
           <el-link
             :href="github"
             type="info"
             target="_blank;"
-          >          
+          >
             <span>{{ github }}</span>
             <img
               style="width:16px;margin-left: 5px;"
@@ -54,7 +54,7 @@
         </el-col>
       </el-row>
     </div>
-    
+
     <!-- Mobile -->
     <div class="hidden-md-and-up">
       <el-row>
@@ -66,7 +66,7 @@
         <el-col :span="14">
           <span style="font-size: xx-large;">{{ name }}</span><br>
           <span style="font-size: large;color: #008080;">{{ title }}</span>
-        </el-col>        
+        </el-col>
       </el-row>
 
       <el-row>
@@ -75,24 +75,24 @@
             type="info"
             :href="switchLangUrl"
           >
-            <i class="el-icon-view" />
-            {{ lang }}            
+            <el-icon><View /></el-icon>
+            {{ lang }}
           </el-link>
           <br>
           <el-link
             :href="'mailto:' + email"
             type="info"
           >
-            <i class="el-icon-s-promotion" />
-            {{ email }}            
+            <el-icon><Promotion /></el-icon>
+            {{ email }}
           </el-link>
           <br>
           <el-link
             :href="'tel:' + phone"
             type="info"
           >
-            <i class="el-icon-phone" />
-            {{ phone }}            
+            <el-icon><Phone /></el-icon>
+            {{ phone }}
           </el-link>
           <br>
           <el-link
@@ -104,7 +104,7 @@
               style="width:16px;margin-right: 5px;"
               src="../assets/GitHub-Mark-32px.png"
             >
-            <span>{{ github }}</span>            
+            <span>{{ github }}</span>
           </el-link>
         </el-col>
       </el-row>
@@ -145,7 +145,7 @@ export default {
     switchLangUrl: function() {
       return localStorage.getItem('lang') == 'zh' ? '?lang=en' : '?lang=zh';
     }
-  }  
+  }
 }
 </script>
 

@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <span class="sectionTitle text-uppercase">        
-      <i :class="icon" />
+  <div style="width: 100%;">
+    <span class="sectionTitle text-uppercase">
+      <el-icon><component :is="icon" /></el-icon>
       {{ title }}
     </span>
     <div class="line" />
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -18,8 +18,8 @@ export default {
       default: ''
     },
     icon: {
-      type: String,
-      default: ''
+      type: Object,
+      default: null
     }
   }
 }
@@ -27,7 +27,7 @@ export default {
 
 
 <style scoped>
-  .sectionTitle {    
+  .sectionTitle {
     font-size: xx-large;
     font-weight: bold;
     margin-left: 5%;

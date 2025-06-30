@@ -7,7 +7,7 @@
     >
       <el-col :span="12">
         <Experience />
-      </el-col>    
+      </el-col>
       <el-col :span="12">
         <Skill />
         <OtherSkill />
@@ -24,7 +24,7 @@
       <Education />
       <Language />
     </el-row>
-  </div>  
+  </div>
 </template>
 
 <script>

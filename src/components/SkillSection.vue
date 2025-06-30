@@ -3,30 +3,28 @@
     <el-row>
       <section-title
         :title="$t('skills')"
-        icon="el-icon-folder"
+        :icon="Folder"
       />
     </el-row>
     <el-row style="margin-left: 5%;">
       <el-tag
-        v-for="skill in skillList"   
+        v-for="skill in skillList"
         :key="skill.name"
         color="#008080"
-        effect="dark"
+        size="large"
         :style="{'font-size': 'large', 'cursor': (skill.link != '' ? 'pointer' : 'default') }"
         @click="openLink(skill.link)"
       >
-        {{ skill.name }}
-        <i
-          v-if="skill.link != ''"
-          class="el-icon-share"
-        />
+        <span style="color: #FFFFFF;">{{ skill.name }}</span>
+        <el-icon v-if="skill.link != ''" color="#FFFFFF" ><Share /></el-icon>
       </el-tag>
     </el-row>
-  </div>    
+  </div>
 </template>
 
 <script>
 import sectionTitle from './SectionTitle.vue'
+import { Folder, Share } from '@element-plus/icons-vue'
 
 // Skill區塊
 export default {
@@ -47,7 +45,9 @@ export default {
         { name: 'ElementUI', link: '' },
         { name: 'CoreUI', link: '' },
         { name: 'Bootstrap', link: '' }
-      ]
+      ],
+      Folder,
+      Share
     };
   },
   methods: {

@@ -3,7 +3,7 @@
     <el-row>
       <section-title
         :title="$t('workExperience')"
-        icon="el-icon-suitcase-1"
+        :icon="SuitcaseLine"
       />
     </el-row>
     <el-row>
@@ -24,12 +24,7 @@
             >
               <el-row>
                 <el-col :span="2">
-                  <span style="color:#5A5A5A;">
-                    <i
-                      style="font-size: large;"
-                      class="el-icon-caret-right"
-                    />
-                  </span>
+                  <el-icon style="font-size: large;"><CaretRight /></el-icon>
                 </el-col>
                 <el-col :span="22">
                   <span style="font-size: large;">{{ task }}</span>
@@ -45,6 +40,7 @@
 
 <script>
 import sectionTitle from './SectionTitle.vue'
+import { SuitcaseLine } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
 
 // 工作經歷區塊
@@ -122,7 +118,8 @@ export default {
       }
     ]
     return {
-      activities
+      activities,
+      SuitcaseLine
     }
   }
 }
