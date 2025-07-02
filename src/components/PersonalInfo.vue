@@ -116,37 +116,27 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
-export default {
-  name: 'PersonalInfo',
-  setup() {
-    const { t } = useI18n()
+const { t } = useI18n()
 
-    const name = t('myName')
-    const title = t('myTitle')
-    const introduction = t('introduction')
+const name = t('myName')
+const title = t('myTitle')
+const introduction = t('introduction')
+const email = 'genius9450@gmail.com'
+const phone = '+886919689866'
+const github = 'https://github.com/genius9450'
 
-    return {
-      name,
-      title,
-      email: 'genius9450@gmail.com',
-      phone: '+886919689866',
-      github: 'https://github.com/genius9450',
-      introduction
-    }
-  },
-  computed: {
-    lang: function () {
-      let currentLang = localStorage.getItem('lang');
-      return currentLang == 'en' ? '閱讀中文' : 'Read in English';
-    },
-    switchLangUrl: function() {
-      return localStorage.getItem('lang') == 'zh' ? '?lang=en' : '?lang=zh';
-    }
-  }
-}
+const lang = computed(() => {
+  let currentLang = localStorage.getItem('lang');
+  return currentLang == 'en' ? '閱讀中文' : 'Read in English';
+})
+
+const switchLangUrl = computed(() => {
+  return localStorage.getItem('lang') == 'zh' ? '?lang=en' : '?lang=zh';
+})
 </script>
 
 <style scoped>

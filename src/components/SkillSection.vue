@@ -16,45 +16,36 @@
         @click="openLink(skill.link)"
       >
         <span style="color: #FFFFFF;">{{ skill.name }}</span>
-        <el-icon v-if="skill.link != ''" color="#FFFFFF" ><Share /></el-icon>
+        <el-icon
+          v-if="skill.link != ''"
+          color="#FFFFFF"
+        >
+          <Share />
+        </el-icon>
       </el-tag>
     </el-row>
   </div>
 </template>
 
-<script>
+<script setup>
 import sectionTitle from './SectionTitle.vue'
 import { Folder, Share } from '@element-plus/icons-vue'
 
-// Skill區塊
-export default {
-  name: 'SkillSection',
-  components: {
-    sectionTitle
-  },
-  data: function () {
-    return {
-      skillList: [
-        { name: 'DotNet Core', link: 'https://github.com/genius9450/DotNetCoreApi.Template' },
-        { name: 'ASP.NET MVC', link: '' },
-        { name: 'ASP.NET Webform', link: '' },
-        { name: 'Xamarin', link: '' },
-        { name: 'Angular', link: '' },
-        { name: 'Vue', link: 'https://github.com/genius9450/mask-query-system' },
-        { name: 'KendoUI', link: '' },
-        { name: 'ElementUI', link: '' },
-        { name: 'CoreUI', link: '' },
-        { name: 'Bootstrap', link: '' }
-      ],
-      Folder,
-      Share
-    };
-  },
-  methods: {
-    openLink(link) {
-      if(link) window.open(link, '_blank');
-    }
-  }
+const skillList = [
+  { name: 'DotNet Core', link: 'https://github.com/genius9450/DotNetCoreApi.Template' },
+  { name: 'ASP.NET MVC', link: '' },
+  { name: 'ASP.NET Webform', link: '' },
+  { name: 'Xamarin', link: '' },
+  { name: 'Angular', link: '' },
+  { name: 'Vue', link: 'https://github.com/genius9450/mask-query-system' },
+  { name: 'KendoUI', link: '' },
+  { name: 'ElementUI', link: '' },
+  { name: 'CoreUI', link: '' },
+  { name: 'Bootstrap', link: '' }
+]
+
+function openLink(link) {
+  if(link) window.open(link, '_blank');
 }
 </script>
 

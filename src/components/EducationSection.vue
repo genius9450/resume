@@ -20,32 +20,18 @@
   </div>    
 </template>
 
-<script>
+<script setup>
 import sectionTitle from './SectionTitle.vue'
 import { School } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
 
-// 學歷區塊
-export default {
-  name: 'EductionSection',
-  components: {
-    sectionTitle
-  },
-  setup() {
-    const { t } = useI18n()
+const { t } = useI18n()
 
-    const activities = [
-      {
-        dept: t('hami'),
-        school: t('kmu'),
-        timestamp: '2012/09 - 2016/06'
-      }
-    ]
-
-    return {
-      activities,
-      School
-    }
+const activities = [
+  {
+    dept: t('hami'),
+    school: t('kmu'),
+    timestamp: '2012/09 - 2016/06'
   }
-}
+]
 </script>

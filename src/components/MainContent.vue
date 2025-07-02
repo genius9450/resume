@@ -27,21 +27,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Experience from './ExperienceSection.vue'
 import Skill from './SkillSection.vue'
 import OtherSkill from './OtherSkillSection.vue'
 import Education from './EducationSection.vue'
 import Language from './LanguageSection.vue'
-
-export default {
-  name: 'MainContent',
-  components: {
-    Experience,
-    Skill,
-    OtherSkill,
-    Education,
-    Language
-  }
-}
 </script>

@@ -14,23 +14,12 @@
   </el-card>
 </template>
 
-<script>
+<script setup>
 import BgImg from "./assets/bg.png"
 import Personal from './components/PersonalInfo.vue'
 import MainContent from './components/MainContent.vue'
 
-export default {
-  name: 'App',
-  components: {
-    Personal,
-    MainContent
-  },
-  data: function() {
-    return {
-      bgImg: BgImg
-    }
-  }
-}
+const bgImg = BgImg
 </script>
 
 <style>

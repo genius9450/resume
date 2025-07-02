@@ -19,50 +19,38 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import sectionTitle from './SectionTitle.vue'
 import { FolderOpened } from '@element-plus/icons-vue'
 
-// Other Skill區塊
-export default {
-  name: 'OtherSkillSection',
-  components: {
-    sectionTitle
+const otherSkillList = [
+  {
+    type: 'Languages',
+    desc: 'C#, VB, JavaScript, SQL'
   },
-  data: function () {
-    return {
-        otherSkillList: [
-         {
-           type: 'Languages',
-           desc: 'C#, VB, JavaScript, SQL'
-         },
-         {
-           type: 'Frameworks',
-           desc: '.NET Core, ABP, ASP.NET MVC, ASP.NET WebForm, Vue, Angular'
-         },
-         {
-           type: 'Database',
-           desc: 'Ms-SQL, MySQL, MongoDb, Redis'
-         },
-         {
-           type: 'Version Control',
-           desc: 'Subversion, Git'
-         },
-         {
-           type: 'IDE/Editor',
-           desc: 'Visual Studio,Visual Code'
-         },
-         {
-           type: 'Issue Trackers',
-           desc: 'Jira, Mantis, Redmine, Trello'
-         },
-         {
-           type: 'Others',
-           desc: 'SignalR, Lucene, Solr, Seq, RabbitMQ'
-         }
-        ],
-        FolderOpened
-      };
-    },
-}
+  {
+    type: 'Frameworks',
+    desc: '.NET Core, ABP, ASP.NET MVC, ASP.NET WebForm, Vue, Angular'
+  },
+  {
+    type: 'Database',
+    desc: 'Ms-SQL, MySQL, MongoDb, Redis'
+  },
+  {
+    type: 'Version Control',
+    desc: 'Subversion, Git'
+  },
+  {
+    type: 'IDE/Editor',
+    desc: 'Visual Studio,Visual Code'
+  },
+  {
+    type: 'Issue Trackers',
+    desc: 'Jira, Mantis, Redmine, Trello'
+  },
+  {
+    type: 'Others',
+    desc: 'SignalR, Lucene, Solr, Seq, RabbitMQ'
+  }
+]
 </script>

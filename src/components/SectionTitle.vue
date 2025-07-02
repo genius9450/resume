@@ -8,21 +8,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 // 區塊表頭
-export default {
-  name: 'SectionTitle',
-  props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    icon: {
-      type: Object,
-      default: null
-    }
+defineProps({
+  title: {
+    type: String,
+    default: ''
+  },
+  icon: {
+    type: Object,
+    default: null
   }
-}
+})
 </script>
 
 

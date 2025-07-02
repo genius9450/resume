@@ -26,38 +26,25 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import sectionTitle from './SectionTitle.vue'
 import { Collection } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
 
-export default {
-  name: 'LanguageSection',
-  components: {
-    sectionTitle
+const { t } = useI18n()
+
+const languages = [
+  { 
+    lang: t('chinese'),
+    rank: 5
   },
-  setup() {
-    const { t } = useI18n()
-
-    const languages = [
-      { 
-        lang: t('chinese'),
-        rank: 5
-      },
-      { 
-        lang: t('taiwanese'),
-        rank: 4
-      },
-      { 
-        lang: t('english'),
-        rank: 3
-      }
-    ]
-
-    return {
-      languages,
-      Collection
-    }
+  {
+    lang: t('taiwanese'),
+    rank: 4
+  },
+  {
+    lang: t('english'),
+    rank: 3
   }
-}
+]
 </script>

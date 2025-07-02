@@ -1,28 +1,28 @@
 #!/usr/bin/env sh
-# °»¿ù¼Ò¦¡¡G·íµo¥Í¿ù»~®É²×¤î¸}¥»°õ¦æ
+# åµéŒ¯æ¨¡å¼ï¼šç•¶ç™¼ç”ŸéŒ¯èª¤æ™‚çµ‚æ­¢è…³æœ¬åŸ·è¡Œ
 set -e
 
-# ¥´¥]±M®×
+# æ‰“åŒ…å°ˆæ¡ˆ
 echo "Building project..."
 npm run build
 
-# ²¾°Ê¨ì¥´¥]«áªº dist ¥Ø¿ı
+# ç§»å‹•åˆ°æ‰“åŒ…å¾Œçš„ dist ç›®éŒ„
 cd dist
 
-# ªì©l¤Æ Git ¨Ã´£¥æÅÜ§ó
+# åˆå§‹åŒ– Git ä¸¦æäº¤è®Šæ›´
 echo "Initializing Git in dist directory..."
 git init
 git add -A
 git commit -m 'deploy'
 
-# ³¡¸p¨ì GitHub Pages
+# éƒ¨ç½²åˆ° GitHub Pages
 REPO_URL="https://github.com/genius9450/resume.git"
 BRANCH="gh-pages"
 
 echo "Deploying to GitHub Pages..."
 git push -f "$REPO_URL" master:"$BRANCH"
 
-# ªğ¦^­ì©l¥Ø¿ı
+# è¿”å›åŸå§‹ç›®éŒ„
 cd -
 
 echo "Deployment successful!"
