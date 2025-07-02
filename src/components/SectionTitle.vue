@@ -1,27 +1,30 @@
 <template>
-  <div>
-      <span class="sectionTitle text-uppercase">        
-        <i :class="icon"></i>
-        {{ title }}
-      </span>
-      <div class="line"></div>
-  </div>  
+  <div style="width: 100%;">
+    <span class="sectionTitle text-uppercase">
+      <el-icon><component :is="icon" /></el-icon>
+      {{ title }}
+    </span>
+    <div class="line" />
+  </div>
 </template>
 
-<script>
+<script setup>
 // 區塊表頭
-export default {
-  name: 'SectionTitle',
-  props: {
-    title: String,
-    icon: String
+defineProps({
+  title: {
+    type: String,
+    default: ''
+  },
+  icon: {
+    type: Object,
+    default: null
   }
-}
+})
 </script>
 
 
 <style scoped>
-  .sectionTitle {    
+  .sectionTitle {
     font-size: xx-large;
     font-weight: bold;
     margin-left: 5%;
