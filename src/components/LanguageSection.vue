@@ -27,13 +27,14 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import sectionTitle from './SectionTitle.vue'
 import { Collection } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const languages = [
+const languages = computed(() => [
   { 
     lang: t('chinese'),
     rank: 5
@@ -46,5 +47,5 @@ const languages = [
     lang: t('english'),
     rank: 3
   }
-]
+])
 </script>

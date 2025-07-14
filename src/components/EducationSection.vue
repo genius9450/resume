@@ -21,17 +21,18 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import sectionTitle from './SectionTitle.vue'
 import { School } from '@element-plus/icons-vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-const activities = [
+const activities = computed(() => [
   {
     dept: t('hami'),
     school: t('kmu'),
     timestamp: '2012/09 - 2016/06'
   }
-]
+])
 </script>

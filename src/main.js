@@ -4,32 +4,9 @@ import router from './router'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/display.css';
-import { createI18n } from 'vue-i18n'
-import zh from './lang/zh.json'
-import en from './lang/en.json'
+import i18n from './lang' // 從新檔案匯入
 
 const app = createApp(App)
-
-// 預設使用的語系
-let locale = ''
-switch(new URL(window.location.href).searchParams.get('lang')?.toUpperCase()) {
-  case 'EN':
-    locale = 'en';
-    break;
-  default:
-    locale = 'zh';
-    break;
-}
-localStorage.setItem('lang', locale);
-
-const i18n = createI18n({
-  legacy: false,
-  locale: locale,
-  messages: {
-    'zh': zh,
-    'en': en
-  }
-});
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
@@ -40,4 +17,18 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 app.use(router)
 app.use(ElementPlus)
 app.use(i18n)
+
+router.beforeEach((to, from, next) => {
+  const lang = to.params.lang;
+
+  // 驗證語言參數
+  if (['en', 'zh'].includes(lang)) {
+    i18n.global.locale.value = lang;
+    return next();
+  }
+
+  // 如果語言參數無效或缺失，則重定向到預設的中文頁面
+  return next('/zh/index');
+});
+
 app.mount('#app')
