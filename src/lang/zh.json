@@ -1,13 +1,15 @@
 {        
     "myName": "江佩珊",
+    "myNickName": "Sandy Chiang",
     "myTitle": "全端工程師",
 
+    "hideCompanyName": "暫不提供",
     "workExperience": "工作經歷",
     "productDeveloper": "產品開發師",
     "developmentEngineer": "研發工程師",
     "programmer": "程式設計師",
     "programAnalyst": "程式分析師",
-    "assistantProgrammer": "助理工程師",
+    "assistantProgrammer": "助理工程師",    
 
     "telexpress": "網訊電通",
     "telexpress_task1": "電商平台模組開發",

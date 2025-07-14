@@ -6,7 +6,7 @@
       class="hidden-md-and-down"
     >
       <el-col :span="12">
-        <Experience />
+        <Experience :is-anonymous="isAnonymous" />
       </el-col>
       <el-col :span="12">
         <Skill />
@@ -18,7 +18,7 @@
 
     <!-- Mobile -->
     <el-row class="hidden-md-and-up">
-      <Experience />
+      <Experience :is-anonymous="isAnonymous" />
       <Skill />
       <OtherSkill />
       <Education />
@@ -33,4 +33,12 @@ import Skill from './SkillSection.vue'
 import OtherSkill from './OtherSkillSection.vue'
 import Education from './EducationSection.vue'
 import Language from './LanguageSection.vue'
+
+defineProps({
+  isAnonymous: {
+    type: Boolean,
+    default: false
+  }
+})
+
 </script>
