@@ -16,14 +16,14 @@
 
 <script setup>
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import BgImg from "../assets/bg.png"
 import PersonalInfo from '../components/PersonalInfo.vue'
 import MainContent from '../components/MainContent.vue'
 
 const bgImg = BgImg
-const isAnonymous = computed(() => {
-  return window.location.pathname.includes('/anonymous');
-})
+const route = useRoute()
+const isAnonymous = computed(() => route.name === 'Anonymous')
 </script>
 
 <style>

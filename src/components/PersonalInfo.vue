@@ -19,7 +19,7 @@
         >
           <el-link
             type="info"
-            :href="switchLangUrl"
+            @click="switchLang"
           >
             {{ lang }}
             <el-icon><View /></el-icon>
@@ -76,7 +76,7 @@
         <el-col class="contactInfoMobile">
           <el-link
             type="info"
-            :href="switchLangUrl"
+            @click="switchLang"
           >
             <el-icon><View /></el-icon>
             {{ lang }}
@@ -123,6 +123,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { defineProps, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 const props = defineProps({
   isAnonymous: {
@@ -131,24 +132,26 @@ const props = defineProps({
   }
 })
 
-const { t } = useI18n()
+const route = useRoute();
+const router = useRouter();
+const { t, locale } = useI18n()
 
-const title = t('myTitle')
-const introduction = t('introduction')
 const email = 'genius9450@gmail.com'
 const phone = '+886919689866'
 const github = 'https://github.com/genius9450'
 
+const title = computed(() => t('myTitle'))
+const introduction = computed(() => t('introduction'))
 const name = computed(() => props.isAnonymous ? t('myNickName') : t('myName'))
 
 const lang = computed(() => {
-  let currentLang = localStorage.getItem('lang');
-  return currentLang == 'en' ? '閱讀中文' : 'Read in English';
+  return locale.value == 'en' ? '閱讀中文' : 'Read in English';
 })
 
-const switchLangUrl = computed(() => {
-  return localStorage.getItem('lang') == 'zh' ? '?lang=en' : '?lang=zh';
-})
+const switchLang = () => {
+  const newLang = locale.value === 'zh' ? 'en' : 'zh';
+  router.push({ name: route.name, params: { lang: newLang } });
+}
 </script>
 
 <style scoped>
