@@ -4,8 +4,9 @@
     <div class="hidden-md-and-down">
       <el-row>
         <el-col :span="14">
-          <el-avatar :size="100">
-            <img src="../assets/photo.png">
+          <el-avatar :size="100">                        
+            <img v-if="isAnonymous" src="../assets/anonymous.png" />
+            <img v-else src="../assets/photo.png" />          
           </el-avatar>
           <div class="nameText">
             <span style="font-size: xx-large;font-weight: bold;">{{ name }}</span> <br>
@@ -32,14 +33,15 @@
             <el-icon><Message /></el-icon>
           </el-link>
           <br>
-          <el-link
+          <el-link           
+            v-if="!isAnonymous" 
             :href="'tel:' + phone"
             type="info"
           >
             {{ phone }}
             <el-icon><Phone /></el-icon>
           </el-link>
-          <br>
+          <br v-if="!isAnonymous">
           <el-link
             :href="github"
             type="info"
@@ -60,7 +62,8 @@
       <el-row>
         <el-col :span="10">
           <el-avatar :size="100">
-            <img src="../assets/photo.png">
+            <img v-if="isAnonymous" src="../assets/anonymous.png" />
+            <img v-else src="../assets/photo.png" />
           </el-avatar>
         </el-col>
         <el-col :span="14">
@@ -87,14 +90,15 @@
             {{ email }}
           </el-link>
           <br>
-          <el-link
+          <el-link  
+            v-if="!isAnonymous"          
             :href="'tel:' + phone"
             type="info"
           >
             <el-icon><Phone /></el-icon>
             {{ phone }}
           </el-link>
-          <br>
+          <br v-if="!isAnonymous">
           <el-link
             :href="github"
             type="info"
@@ -118,16 +122,24 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-import { computed } from 'vue'
+import { defineProps, computed } from 'vue'
+
+const props = defineProps({
+  isAnonymous: {
+    type: Boolean,
+    default: false
+  }
+})
 
 const { t } = useI18n()
 
-const name = t('myName')
 const title = t('myTitle')
 const introduction = t('introduction')
 const email = 'genius9450@gmail.com'
 const phone = '+886919689866'
 const github = 'https://github.com/genius9450'
+
+const name = computed(() => props.isAnonymous ? t('myNickName') : t('myName'))
 
 const lang = computed(() => {
   let currentLang = localStorage.getItem('lang');
